@@ -1,0 +1,107 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "birthday share",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "no",
+                        "no i dont want to",
+                        "no i do not want to know"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "no",
+                        "no i dont want to",
+                        "no i do not want to know"
+                    ]
+                },
+                {
+                    "name": "GetNewBirthIntent",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "my birthday is {date}",
+                                "my birthday is on {date}",
+                                "{date}",
+                                "i celebrate my birthday {date}",
+                                "i celebrate my birthday on {date}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "with whom do i share my birthday with",
+                        "who shares their birthday with me",
+                        "tell me",
+                        "yes tell me",
+                        "please tell me",
+                        "i want know",
+                        "i want to know who celebrates their birthday with me",
+                        "i want to find out who celebrates their birthday with me",
+                        "who celebrates their birthday with me",
+                        "yes",
+                        "yes i want to",
+                        "yes i want to know"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": [
+                        "who else",
+                        "who else celebrates their birthday with me",
+                        "i want to know who else",
+                        "yes i want to know who else",
+                        "i want to find out who else",
+                        "yes i want to find out who else"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetNewBirthIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.127752050121.515625992142"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.127752050121.515625992142",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "When is your birthday?"
+                    }
+                ]
+            }
+        ]
+    }
+}

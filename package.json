@@ -1,0 +1,17 @@
+{
+  "name": "birthday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "amazon-date-parser": "^0.2.0",
+    "ask-sdk": "^2.6.0",
+    "ask-sdk-core": "^2.6.0"
+  }
+}
